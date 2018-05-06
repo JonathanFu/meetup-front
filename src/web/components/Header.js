@@ -14,10 +14,6 @@ import { Link, withRouter } from 'react-router-dom';
 import Config from '../../constants/config';
 import { SidebarNavItems } from './Sidebar';
 
-import erc20Contract from '../../contracts/erc20';
-import simpleStorage from '../../contracts/simpleStorage';
-import meetupContract from '../../contracts/meetup';
-
 class Header extends Component {
   static propTypes = {
     member: PropTypes.shape({
@@ -48,10 +44,6 @@ class Header extends Component {
   render() {
     const { member } = this.props;
     const loggedIn = !!(member && member.email);
-    const balance = simpleStorage.methods.get.call();
-    const organiserAddress = meetupContract.methods.organiserAddress();
-    const totalSupply = erc20Contract.methods.totalSupply();
-
 
     return (
       <header>
