@@ -1,4 +1,5 @@
 import React from 'react';
+// import './rn-cli.config';
 import { StatusBar, Platform } from 'react-native';
 import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
